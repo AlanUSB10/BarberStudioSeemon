@@ -7,77 +7,114 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header class="padre1">
+    <header>
 <!--===============APARTADO DE LOGO Y NOMBRE===============-->
-        <section class="encabezado">
+        <div class="encabezado" >
             <img id="logo" src="./img/logo barberia.png" alt="Logo barber studio seemon">
             <h1 id="nombrebarber">Barber Studio Seemon.</h1>
-        </section>
+        </div>
+
         <nav class="menu">
-           <div class="navegacion"> <img src="./img/instagram.png" alt="instagram"> <a href="https://www.instagram.com/studioseemon?igsh=MWh2MW92anY5emd1Zg%3D%3D&utm_source=qr" target="_blank">Instagram</a></div>
-           <div class="navegacion"><img src="./img/marcador.png" alt="ubicacion"> <a href="https://maps.app.goo.gl/6znwi7oSoNQxAUGq5" target="_blank">Ubicación</a></div>
-           <div class="navegacion"><img src="./img/whatsapp.png" alt="whatsapp"> <a href="https://www.instagram.com/studioseemon?igsh=MWh2MW92anY5emd1Zg%3D%3D&utm_source=qr" target="_blank">Whatsapp</a></div>
+
+           <a class="enlace" id="instagram" href="https://www.instagram.com/studioseemon?igsh=MWh2MW92anY5emd1Zg%3D%3D&utm_source=qr" target="_blank">
+            <img src="./img/instagram.png" alt="">
+            <span>Instagram</span>
+           </a>
+
+           <a class="enlace" id="ubicacion" href="https://maps.app.goo.gl/6znwi7oSoNQxAUGq5" target="_blank">
+            <img src="./img/marcador.png" alt="">
+            <span>Ubicación</span>
+           </a>
+
+           <a class="enlace" id="whatsapp" href="https://www.instagram.com/studioseemon?igsh=MWh2MW92anY5emd1Zg%3D%3D&utm_source=qr" target="_blank">
+            <img src="./img/whatsapp.png" alt="">
+            <span>WhatsApp</span>
+           </a>
+
         </nav>
+
     </header>
     
     <!--===============CONTENIDO DE LA PAGINA===============*/-->
-    <main class="padre2">
-        <section class="servicios">
-            <div id="card">
-                <img src="./img/fade.jpg" alt="corte fade">
-                <h2>Cortes de pelo.</h2>
-                <p>Un corte de cabello hecho a tus nesecidades.</p>
+    <main>
+        <section id="contenedor-servicios">
+
+            <div class="titulo-servicios">
+                <h2>Nuestros servicios</h2>
             </div>
 
-            <div id="card">
-                <img src="./img/tapper.jpg" alt="corte tapper">
-                <h2>Arreglo de barba.</h2>
-                <p>Un corte de cabello hecho a tus nesecidades.</p>
-            </div>
+            <div id="servicios">
+                <article class="servicio">
+                    <img src="./img/corte de pelo.jpeg" alt="corte de pelo realizado en la barberia">
+                    <h3>Cortes de pelo.</h3>
+                    <p>Un corte de cabello hecho a tus necesidades.</p>
+                </article>
 
-            <div id="card">
-                <img src="./img/mulet.jpg" alt="corte mulet">
-                <h2>Arreglo de ceja.</h2>
-                <p>Un corte de cabello hecho a tus nesecidades.</p>
+                <article class="servicio">
+                    <img src="./img/barba.jpg" alt="arreglo de barba realizado en la barberia">
+                    <h3>Arreglo de barba.</h3>
+                    <p>Un arreglo barba,  hecho a tus necesidades.</p>
+                </article>
+
+                <article class="servicio">
+                    <img src="./img/ceja.jpeg" alt="arreglo de ceja realizado en la barberia">
+                    <h3>Arreglo de ceja.</h3>
+                    <p>Un arreglo de ceja, hecho a tus necesidades.</p>
+                </article>
             </div>
         </section>
-        <div class="titulo">
-            <h2>Caja de comentarios:</h2> 
-        </div>
 
-        <section class="contenedor-com">
-            <div class="items" >
-                <h3>Comentario 1</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia debitis atque quae asperiores aperiam eligendi illo rem dolorem similique deserunt?</p>
+        <section id="referencias">
+
+            <div class="titulo-comentarios">
+                <h2>Caja de comentarios:</h2> 
             </div>
 
-            <div class="items">
-                <h3>Comentario 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia debitis atque quae asperiores aperiam eligendi illo rem dolorem similique deserunt?</p>
-            </div>
+            <div id="comentarios">
 
-            <div class="items">
-                <h3>Comentario 3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia debitis atque quae asperiores aperiam eligendi illo rem dolorem similique deserunt?</p>
+                <article class="comentario" class="link-comentario" >
+                    <h3>Comentario 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia debitis atque quae asperiores aperiam eligendi illo rem dolorem similique deserunt?</p>
+                </article>
+    <!--===============AJUSTAR CSS DE A O ARTICLE===============*/-->
+  
+                <a class="link-comentario" href="https://maps.app.goo.gl/NQw4PCkUBwhCAzJx8" target="_blank">
+                <article class="comentario">
+                    <h3>Uri R.</h3>
+                    <p>E buscado barbero por un tiempo y cuando llegue a su barbería supe que el sería mi próximo barbero su único problema esq no es muy social(no plática mucho?</p>
+                </article>
+                </a>
+
+                <a class="link-comentario" href="https://maps.app.goo.gl/aZXH5CgERbVKHgC99" target="_blank">
+                <article class="comentario">
+                    <h3>Carlos L.</h3>
+                    <p>Excelente lugar para cortarte el cabello, atención personalizada y platicas muy agradables con Erick. Me recomendó productos que van de acuerdo con mi estilo y tipo de cabello. El costo del corte es de $120 y considero que es un precio justo por su trabajo.</p>
+                </article>
+                </a>
             </div>
         </section>
     </main>
    
-    <footer class="contenedor">
-        <div class="derechos">
-            <h3>Derechos</h3>
-        <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
-        <a href="/privacidad">Política de Privacidad</a> | 
-        <a href="/terminos">Términos de Servicio</a>
-    </div>
+    <footer>
+        <div class="informacion bloque-derechos">
+            <h2>Derechos</h2>
+            <p>&copy; 2026 Barber Studio Seemon. Todos los derechos reservados.</p>
+            
+        </div>
 
     <!-- Redes Sociales y Contacto -->
-    <div class="derechos">
-        <h3>Contacto</h3>
-        <p>Email: Barberstudioseemon@gmail.com</p>
-        <a href="https://www.instagram.com/studioseemon?igsh=MWh2MW92anY5emd1Zg%3D%3D&utm_source=qr" target="_blank">Instagram</a>
-    </div>
+        <div class="informacion bloque-ayuda">
+            <h2>Contacto</h2>
+            <p>
+                Contacto: 
+                <a href="mailto:barberstudioseemon@gmail.com">
+                    barberstudioseemon@gmail.com
+                </a>
+            </p>
+            <a href="https://www.instagram.com/studioseemon?igsh=MWh2MW92anY5emd1Zg%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+        </div>
+
     </footer>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
