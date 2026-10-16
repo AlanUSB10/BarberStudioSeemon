@@ -1,238 +1,224 @@
 :root{
     --color-fondo: #1e3a5f;
-    --color-primario: #e8b4a0;
+    --color-primario: #CD905A;
     --color-texto: #DAE7F7;
 }
 
 *{
     box-sizing: border-box;
-    padding: 0%;
-    margin: 0;
 }
+
 body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 16px;   
-    background-color: var(--color-fondo);
-    color: var(--color-primario);
-}
-
-.encabezado{
-    display: flex;
-    width: auto;
-    height: 10%;/*ALTURA*/
-    padding: 0px 0px 80px;
-    align-items:center;
-    justify-content:space-between;
-}
-
-#logo{
-    display: inline-block;
-    width: 20%;
-    height: auto;
-}
-
-#nombrebarber{
-    display: inline-flex;
-    font-size: 4em;
-    width: auto;
-    height: auto;
-}
-
-/*==================== MENU NAVEGACION ====================*/
-
-.menu{
-    display: flex;
-    width: 100%;
-    font-size: 1.3em;
-    padding: 0px 25px 80px;
-    text-align: center;
-    align-items: center;
-    justify-content:space-evenly;
-    gap: 20%;
-}
-
-.menu img{
-    width: 20%;
-    height: auto;
-    padding: 2%;
-}
-
-.navegacion{
-    width: 31%;
-    height: auto;
-    padding: 1%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-evenly;
-    border: 5px;
-    border-radius: 50px;
-    box-shadow: 0 10px 20px rgba(246, 244, 244, 0.15);
-    
+    margin: 0;
+    font-size: 16px;
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
 }
 a{
-    color: var(--color-primario);
+    color: var(--color-fondo);
     text-decoration: none;
 }
-.navegacion:hover{
-    transform: scale(95%);
-    border: 2px solid;
-    border-color: var(--color-primario);
-    border-radius: 50px;
-    text-decoration:underline;
-    
+
+header{
+    display: flex;
+    flex-direction: column;
 }
-.navegacion:hover img{
-    transform:translateY(-65px) translateX(80px) scale(300%);
+/*=========== LOGO Y NOMBRE ===========*/
+.encabezado{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 50px;
+}
+.encabezado img{
     width: 15%;
-    transition:all .4s;
-}
-.navegacion:hover a{
-    transform: translateX(-30px);
-    font-size: 1.5em;
-    transition:all .4s;
-}
-
-/*==================== SERVICIOS ====================*/
-
-.servicios{
-    display: inline-flex;
-    width: 100%;
     height: auto;
-    padding: 25px 10px;
-    font-size: 0;
+    min-width: 90px;
+}
+#nombrebarber{
+    font-size: 4em;
+    color: #CD905A;
+}
+/*=========== MENU DE NAVEGACION ===========*/
+.menu{
+    display: flex;
+    margin: 0 0 50px;
+    gap: 20px;
+    justify-content: space-around;
+}
+.enlace{
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 0.5rem;
+    border: 2px solid var(--color-fondo);
+    border-radius: 50px;
+    text-decoration: none;
+}
+.enlace span{
+    font-size: 1.5em;
+}
+
+
+.enlace > img{
+    width: 30px;
+    height: auto;
+    min-width: 30px;
+}
+
+/*=========== MAIN SERVICIOS ===========*/
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.titulo-servicios >h2{
     text-align: center;
-    color: black;
+    font-size: 3rem;
+}
+#contenedor-servicios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#servicios{
+    display: flex;
+    width: 100%;
+    margin: 20px 15px;
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 20px;
 }
-
-.servicios img{
-    display: inline-flex;
-    width: 80%;
-    height: auto;
-    align-items: center;
-    padding: 10px;
-    border-radius: 50px;
+.servicio{
+    border: 3px solid;
+    border-color: whitesmoke;
+    border-radius: 15px;
+    box-shadow: 20px 25px 55px rgba(194, 190, 190, 0.5);
+    text-align: center;
+    font-size: 1.3em;
+    padding: 20px 0 0;
 }
 
-#card{
-    display: inline-block;
-    width: 100%;
+.servicio > img{
+    width: 321px;
+    max-width: 100%;
     height: auto;
-    padding: 3px;
-    border-radius: 25px;
-    border: 5px;
-    box-shadow: 0 5px 10px rgba(0,0,0,.5);
-    font-size: 1rem;
-    color: var(--color-primario);
-    align-content: space-around;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border: none;
+    border-radius: 20px;
 }
 
-.contenedor-com{
+/*=========== MAIN COMENTARIOS ===========*/
+#referencias{
     display: flex;
-    width: auto;
-    height: 31%;
-    padding: 1%;
-    margin: 5% 0 15%;
-
-    font-size: 1em;
+    flex-direction: column;
+    gap: 25px;
 }
-
-.items{
-    display: inline-block;
-    width: 100%;
-    height: auto;
+.titulo-comentarios{
     text-align: center;
-    padding: 2%;
-    
+    font-size: 2rem;
+}
+.link-comentario{
+    flex-basis: 300px;
+    padding: 10px;
+    transition: ease;
+    border: 2px solid;
+    border-color: aliceblue;
+    border-radius: 25px;
+    box-shadow: 8px 16px 10px rgba(0,0,0,0.5) ;
 }
 
-.items p{
+#comentarios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     text-align: start;
-    margin: 10% 0 0;
+    gap: 30px;
+    margin: 0 15px;
+    flex-wrap: wrap;
 }
 
-.titulo{
-    text-align: center;
-    padding: 5px;
-    margin: 12% auto 5%;
+.comentario{
+    flex-basis: 300px;
+    transition: ease;
 }
 
-/*==================== FOOTER ====================*/
 
-footer{
-    display: block;
-    width: 100%;
-    height: auto;
+.comentario > h3{
     text-align: center;
+    font-size: 2em;
+    color: var(--color-primario);
+
+}
+.comentario p{
     font-size: 1em;
-    margin: 2% 0 1%;
-    padding: 2%;
 }
 
-.derechos{
-    display: block;
-    padding: 2% 0 1%;
+/*=========== FOOTER  ===========*/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0 25px;
+}
+.informacion{
+    text-align: center;
+    font-size: 1rem;
+}
+.informacion > h2{
+    font-size: 1.5rem;
 }
 
-@media (max-width: 768px){
-    *{
-    box-sizing: border-box;
-    padding: 0%;
-    margin: 0;
+@media (max-width: 600px){
+
+    #nombrebarber{
+        font-size: 1.5rem;
     }
-    .padre1{
-        display: flex;
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-        flex: 1 1 30em;
-        width: 100%;
+    h2{
+        font-size: 2rem;
     }
-    .encabezado{
-        display: flex;
-        font-size: .3em;
-        padding: 10px 0 50px;
+    h3{
+        font-size: 1rem;
     }
-    #logo{
-        width: 30%;
-    }
+    p{
+        font-size: 1%;
+    } 
     .menu{
         display: flex;
-        font-size: .3em;
-        width: 100%;
-        height: auto;
-        padding: 0 0 50px;
-        gap: 2px;
+        
     }
-    .navegacion{
-        width: 31%;
-        height: auto;
-        padding: 1%;
+    .enlace{
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
     }
-    .menu img{
-        width: 25%;
-        height: auto;
+    .enlace > span{
+        font-size: 1rem;
+    }        
+    #comentarios > .comentario,
+    #comentarios > .link-comentario{
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+@media (hover: hover) and (pointer: fine) {
+    .link-comentario:hover {
+        transform: scale(110%);
+    } 
+    .enlace:hover{
+    color: whitesmoke;
+    transition: 1s;
+    }
+    #instagram:hover{
+        background:linear-gradient(90deg,blue, rgb(242, 78, 105));
+    }
+    #ubicacion:hover{
+        background: linear-gradient(90deg,rgb(148, 148, 226) , rgb(24, 24, 173));
+    }
+    #whatsapp:hover{
+        background: linear-gradient(90deg,rgb(19, 218, 19), rgb(31, 92, 31));
     }
 
-    .servicios{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-    #card{
-        max-width: 280px;
-        height: auto;
-    }
-    .contenedor-com{
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-        align-items: center;
-    }
-    .items{
-        max-width: 280px;
-        height: auto;
-    }
 }
