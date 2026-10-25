@@ -1,7 +1,10 @@
 :root{
-    --color-fondo: #1e3a5f;
+    --color-fondo: #DAE7F7;
     --color-primario: #CD905A;
-    --color-texto: #DAE7F7;
+    --color-texto: #1e3a5f;
+    --color-bordes: #324c6ed1;
+    --sombra-tarjetas: 8px 16px 10px rgba(0, 0, 0, 0.5);
+    --sombra-enlaces: 8px 16px 10px rgba(0, 0, 0, 0.5);
 }
 
 *{
@@ -11,18 +14,33 @@
 body{
     margin: 0;
     font-size: 16px;
-    background-color: var(--color-texto);
-    color: var(--color-fondo);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
 }
 a{
-    color: var(--color-fondo);
+    color: var(--color-texto);
     text-decoration: none;
+}
+.switch{
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+/* Colores del modo oscuro: puedes cambiarlos cuando personalices el tema. */
+body.modo-oscuro{
+    --color-fondo: #2c3e54;
+    --color-primario: #CD905A;
+    --color-texto: #DAE7F7;
+    --color-bordes: aliceblue;
+
 }
 
 header{
     display: flex;
     flex-direction: column;
 }
+
 /*=========== LOGO Y NOMBRE ===========*/
 .encabezado{
     display: flex;
@@ -35,12 +53,12 @@ header{
     height: auto;
     min-width: 90px;
 }
-#nombrebarber{
+#seemon-nombrebarber{
     font-size: 4em;
-    color: #CD905A;
+    color: var(--color-primario);
 }
 /*=========== MENU DE NAVEGACION ===========*/
-.menu{
+.seemon-menu{
     display: flex;
     margin: 0 0 50px;
     gap: 20px;
@@ -51,7 +69,7 @@ header{
     align-items: center;
     padding: 10px 16px;
     gap: 0.5rem;
-    border: 2px solid var(--color-fondo);
+    border: 2px solid var(--color-bordes);
     border-radius: 50px;
     text-decoration: none;
 }
@@ -72,17 +90,17 @@ main{
     flex-direction: column;
     gap: 30px;
 }
-.titulo-servicios >h2{
+.seemon-titulo-servicios >h2{
     text-align: center;
     font-size: 3rem;
 }
-#contenedor-servicios{
+#seemon-contenedor-servicios{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#servicios{
+#seemon-servicios{
     display: flex;
     width: 100%;
     margin: 20px 15px;
@@ -90,17 +108,17 @@ main{
     flex-wrap: wrap;
     gap: 20px;
 }
-.servicio{
+.seemon-servicio{
     border: 3px solid;
-    border-color: whitesmoke;
+    border-color: var(--color-bordes);
     border-radius: 15px;
-    box-shadow: 20px 25px 55px rgba(194, 190, 190, 0.5);
+    box-shadow: var(--sombra-tarjetas);
     text-align: center;
     font-size: 1.3em;
     padding: 20px 0 0;
 }
 
-.servicio > img{
+.seemon-servicio > img{
     width: 321px;
     max-width: 100%;
     height: auto;
@@ -111,12 +129,12 @@ main{
 }
 
 /*=========== MAIN COMENTARIOS ===========*/
-#referencias{
+#seemon-referencias{
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
-.titulo-comentarios{
+.seemon-titulo-comentarios{
     text-align: center;
     font-size: 2rem;
 }
@@ -125,12 +143,12 @@ main{
     padding: 10px;
     transition: ease;
     border: 2px solid;
-    border-color: aliceblue;
+    border-color: var(--color-bordes);
     border-radius: 25px;
-    box-shadow: 8px 16px 10px rgba(0,0,0,0.5) ;
+    box-shadow: var(--sombra-enlaces);
 }
 
-#comentarios{
+#seemon-comentarios{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -140,19 +158,19 @@ main{
     flex-wrap: wrap;
 }
 
-.comentario{
+.comentario, .seemon-comentario{
     flex-basis: 300px;
     transition: ease;
 }
 
 
-.comentario > h3{
+.comentario > h3, .seemon-comentario > h3{
     text-align: center;
     font-size: 2em;
     color: var(--color-primario);
 
 }
-.comentario p{
+.comentario p, .seemon-comentario p{
     font-size: 1em;
 }
 
@@ -173,7 +191,7 @@ footer{
 
 @media (max-width: 600px){
 
-    #nombrebarber{
+    #seemon-nombrebarber{
         font-size: 1.5rem;
     }
     h2{
@@ -185,7 +203,10 @@ footer{
     p{
         font-size: 1%;
     } 
-    .menu{
+    .switch{
+        display: none;
+    }
+    .seemon-menu{
         display: flex;
         
     }
@@ -197,8 +218,9 @@ footer{
     .enlace > span{
         font-size: 1rem;
     }        
-    #comentarios > .comentario,
-    #comentarios > .link-comentario{
+    #seemon-comentarios > .comentario,
+    #seemon-comentarios > .seemon-comentario,
+    #seemon-comentarios > .link-comentario{
         flex: 1 1 100%;
         max-width: 100%;
     }
@@ -208,7 +230,7 @@ footer{
         transform: scale(110%);
     } 
     .enlace:hover{
-    color: whitesmoke;
+    color: var(--color-bordes);
     transition: 1s;
     }
     #instagram:hover{
