@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BarberStudioSeemon</title>
     <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
 </head>
 <body>
     <header>
+        <!--========== BOOTSTRAP ==========-->
+        <div class="switch" >
+        <input type="checkbox" value="" id="switch" role="switch" switch>
+        </div>
 <!--===============APARTADO DE LOGO Y NOMBRE===============-->
         <div class="encabezado" >
-            <img id="logo" src="./img/logo barberia.png" alt="Logo barber studio seemon">
-            <h1 id="nombrebarber">Barber Studio Seemon.</h1>
+            <img id="seemon-logo" src="./img/logo barberia.png" alt="Logo barber studio seemon">
+            <h1 id="seemon-nombrebarber">Barber Studio Seemon.</h1>
         </div>
 
-        <nav class="menu">
+        <nav class="seemon-menu">
 
            <a class="enlace" id="instagram" href="https://www.instagram.com/studioseemon?igsh=MWh2MW92anY5emd1Zg%3D%3D&utm_source=qr" target="_blank">
             <img src="./img/instagram.png" alt="">
@@ -37,26 +42,26 @@
     
     <!--===============CONTENIDO DE LA PAGINA===============*/-->
     <main>
-        <section id="contenedor-servicios">
+        <section id="seemon-contenedor-servicios">
 
-            <div class="titulo-servicios">
+            <div class="seemon-titulo-servicios">
                 <h2>Nuestros servicios</h2>
             </div>
 
-            <div id="servicios">
-                <article class="servicio">
+            <div id="seemon-servicios">
+                <article class="seemon-servicio">
                     <img src="./img/corte de pelo.jpeg" alt="corte de pelo realizado en la barberia">
                     <h3>Cortes de pelo.</h3>
                     <p>Un corte de cabello hecho a tus necesidades.</p>
                 </article>
 
-                <article class="servicio">
+                <article class="seemon-servicio">
                     <img src="./img/barba.jpg" alt="arreglo de barba realizado en la barberia">
                     <h3>Arreglo de barba.</h3>
                     <p>Un arreglo barba,  hecho a tus necesidades.</p>
                 </article>
 
-                <article class="servicio">
+                <article class="seemon-servicio">
                     <img src="./img/ceja.jpeg" alt="arreglo de ceja realizado en la barberia">
                     <h3>Arreglo de ceja.</h3>
                     <p>Un arreglo de ceja, hecho a tus necesidades.</p>
@@ -64,13 +69,13 @@
             </div>
         </section>
 
-        <section id="referencias">
+        <section id="seemon-referencias">
 
-            <div class="titulo-comentarios">
+            <div class="seemon-titulo-comentarios">
                 <h2>Caja de comentarios:</h2> 
             </div>
 
-            <div id="comentarios">
+            <div id="seemon-comentarios">
 
                 <article class="comentario" class="link-comentario" >
                     <h3>Comentario 1</h3>
@@ -79,14 +84,14 @@
     <!--===============AJUSTAR CSS DE A O ARTICLE===============*/-->
   
                 <a class="link-comentario" href="https://maps.app.goo.gl/NQw4PCkUBwhCAzJx8" target="_blank">
-                <article class="comentario">
+                <article class="seemon-comentario">
                     <h3>Uri R.</h3>
                     <p>E buscado barbero por un tiempo y cuando llegue a su barbería supe que el sería mi próximo barbero su único problema esq no es muy social(no plática mucho?</p>
                 </article>
                 </a>
 
                 <a class="link-comentario" href="https://maps.app.goo.gl/aZXH5CgERbVKHgC99" target="_blank">
-                <article class="comentario">
+                <article class="seemon-comentario">
                     <h3>Carlos L.</h3>
                     <p>Excelente lugar para cortarte el cabello, atención personalizada y platicas muy agradables con Erick. Me recomendó productos que van de acuerdo con mi estilo y tipo de cabello. El costo del corte es de $120 y considero que es un precio justo por su trabajo.</p>
                 </article>
@@ -103,7 +108,7 @@
         </div>
 
     <!-- Redes Sociales y Contacto -->
-        <div class="informacion bloque-ayuda">
+        <div class="informacion bloque-ayuda" >
             <h2>Contacto</h2>
             <p>
                 Contacto: 
@@ -116,5 +121,7 @@
 
     </footer>
     <script src="./script.js"></script>
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
 </body>
 </html>
