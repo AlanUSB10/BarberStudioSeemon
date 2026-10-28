@@ -230,7 +230,7 @@ footer{
         transform: scale(110%);
     } 
     .enlace:hover{
-    color: var(--color-bordes);
+    color: aliceblue;
     transition: 1s;
     }
     #instagram:hover{
